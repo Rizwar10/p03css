@@ -1,0 +1,98 @@
+.tabel-konten{
+    border-collapse: collapse;
+    margin: 50px auto;
+    font-size: 0.9em;
+    min-width: 400px;
+    font-family: sans-serif;
+    border-radius: 5px 5px 0 0;
+    overflow: hidden;
+    box-shadow: 0 0 2px rgba(0, 0, 0, 0.15);
+}
+
+.tabel-konten thead tr{
+    background-color: aqua;
+    color: #000000;
+    text-align: center;
+    font-weight: bold;
+}
+
+.tabel-konten th,
+.tabel-konten td{
+    padding: 20px 20px;
+}
+
+.tabel-konten tbody tr{
+    border-bottom: 1px solid #ffffff;
+}
+
+.tabel-konten tbody tr:nth-of-type(even){
+    background-color: #dfdfdf;
+}
+
+.tabel-konten tbody tr:last-of-type{
+    border-bottom: 2px solid #009879;
+}
+
+.tabel-konten tbody tr .active-row{
+    font-weight: bold;
+    color: rgb(0, 174, 255);
+}
+.tabel-konten td:hover{
+    transform: scale(1);
+    opacity: 100%;
+    transition-delay:0.1s;
+    background-color: #000;
+    color: #fff;
+}
+body{
+    background-image: url(../Gambar/y-so-serious-white.png);
+}
+
+h1{
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+h3{
+    font-family: calibri;
+    text-align: center;
+    color: steelblue;
+}
+
+button{
+    background: none;
+    border: 2px solid rgb(46, 119, 255);
+    font-family: 'montserrat',sans-serif;
+    text-transform: uppercase;
+    padding: 12px 20px;
+    min-width: 200px;
+    margin: 10px;
+    cursor: pointer;
+    transition: color 0.4s linear;
+    position: relative;
+    font-weight: bold;
+}
+
+button:hover{
+    color: #fff;
+    font-weight: bold;
+}
+
+button::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(46, 119, 255);
+    z-index: -1;
+    transition: transform 0.5s;
+    transform-origin: 0 0;
+    transition-timing-function: cubic-bezier(0.5,1.6,0.4,0.7);
+}
+button::before{
+    transform: scaleX(0);
+}
+button:hover::before{
+    transform: scaleX(1);
+}
